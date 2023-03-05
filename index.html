@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADDITION</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Addition Khushaal</h1>
+      <div class="numbers-display">
+        <ul>
+          <li>0</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="calc">
+        <p id="x"></p>
+        <p>+</p>
+        <p id="y"></p>
+        <p>=</p>
+        <button onclick="myFunction()">Answer</button> 
+      </div>
+        <p id="answerdisp"></p>
+      <script>
+              let x=Math.floor(Math.random()*11);
+              document.getElementById("x").innerHTML=x;
+              let y=Math.floor(Math.random()*5);
+              document.getElementById("y").innerHTML=y;
+              let k=x+y;
+
+               function myFunction() {
+    let answer= prompt("Please enter your answer");
+       if (answer == k) {
+         document.getElementById("answerdisp").innerHTML =
+         "Hai Khushaal " + answer + " is correct ! Click on Refresh";
+        }
+        else if(answer!=k){
+            document.getElementById("answerdisp").innerHTML =
+         "Hai Khushaal  " + answer + "  is incorrect try again";
+        }
+     }
+      </script>
+    </main>
+  </body>
+</html>
