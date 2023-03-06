@@ -34,10 +34,10 @@ ul {
 }
 
 ul li {
-  margin-right: 2rem;
+  margin-right: 0.5rem;
   border: 2px solid blue;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 1600px;
   background-color: white;
   font-display: inherit;
   height: 50%;
