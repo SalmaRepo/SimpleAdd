@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <h1>Welcome Khushaal</h1>
     <header>
-      <h1>Welcome to Addition Khushaal</h1>
       <div class="numbers-display">
         <ul>
           <li>0</li>
@@ -26,37 +26,40 @@
           <li>11</li>
           <li>12</li>
           <li>13</li>
+          <li>14</li>
         </ul>
       </div>
     </header>
-    <main>
+    <main class="mother">
       <div class="calc">
         <p id="x"></p>
         <p>+</p>
         <p id="y"></p>
         <p>=</p>
-        <button onclick="myFunction()">Answer</button> 
       </div>
-        <p id="answerdisp"></p>
-      <script>
-              let x=Math.floor(Math.random()*11);
-              document.getElementById("x").innerHTML=x;
-              let y=Math.floor(Math.random()*5);
-              document.getElementById("y").innerHTML=y;
-              let k=x+y;
+      <input id="input" type="text" />
+      <input type="button" value="submit" onclick="myFunction()" />
+      <p id="answerdisp"></p>
 
-               function myFunction() {
-    let answer= prompt("Please enter your answer");
-       if (answer == k) {
-         document.getElementById("answerdisp").innerHTML =
-         "Hai Khushaal " + answer + " is correct ! Click on Refresh";
-        }
-        else if(answer!=k){
+      <script>
+        let x = Math.floor(Math.random() * 11);
+        document.getElementById("x").innerHTML = x;
+        let y = Math.floor(Math.random() * 5);
+        document.getElementById("y").innerHTML = y;
+        let k = x + y;
+
+        function myFunction() {
+          let answer = document.getElementById("input").value;
+          if (answer == k) {
             document.getElementById("answerdisp").innerHTML =
-         "Hai Khushaal  " + answer + "  is incorrect try again";
+              "Khushaal  " + answer + "  is CORRECT ,,CLICK Play Again";
+          } else if (answer != k) {
+            document.getElementById("answerdisp").innerHTML =
+              "Khushaal  " + answer + "  is WRONG try again";
+          }
         }
-     }
       </script>
     </main>
+    <button><a href="./index.html"> Play Again</a></button>
   </body>
 </html>
