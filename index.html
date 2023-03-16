@@ -36,9 +36,17 @@
         <p>+</p>
         <p id="y"></p>
         <p>=</p>
+        <input id="input" type="text" />
       </div>
-      <input id="input" type="text" />
-      <input type="button" value="submit" onclick="myFunction()" />
+      
+      <input
+        id="mybutton"
+        type="button"
+        value="submit"
+        onclick="myFunction()"
+      />
+      <button id="playagain"><a href="./index.html"> Play Again</a></button>
+
       <p id="answerdisp"></p>
 
       <script>
@@ -49,7 +57,7 @@
         let k = x + y;
 
         function myFunction() {
-          let answer = document.getElementById("input").value;
+          var answer = document.getElementById("input").value;
           if (answer == k) {
             document.getElementById("answerdisp").innerHTML =
               "Khushaal  " + answer + "  is CORRECT ,,CLICK Play Again";
@@ -58,8 +66,16 @@
               "Khushaal  " + answer + "  is WRONG try again";
           }
         }
+
+        var element = document.getElementById("input");
+        element.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("mybutton").click();
+          }
+        });
       </script>
     </main>
-    <button><a href="./index.html"> Play Again</a></button>
+    
   </body>
 </html>
