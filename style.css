@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  max-width: 70%;
+  width: 70%;
   border: 2px solid blue;
   margin: 0 auto;
   background: linear-gradient(to left top, blue, skyblue);
@@ -68,7 +68,7 @@ ul {
 main {
   border: 2px solid gray;
   border-radius: 0 0 8px 8px;
-  max-width: 70%;
+  width: 70%;
   margin: 0 auto;
   background: linear-gradient(to top left, blue, skyblue);
 }
